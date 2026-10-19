@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Y.N. College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sri Y.N. College</h1>
+        <p>Welcome to Our College</p>
+        <p>Education | Knowledge | Success</p>
+    </header>
+
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">ACADEMICS</a>
+        <a href="#">ADMISSIONS</a>
+        <a href="#examinations">EXAMINATIONS</a>
+        <a href="#">FACULTY</a>
+        <a href="#">CONTACT</a>
+    </nav>
+    <section class="hero">
+
+    <div class="hero-text">
+        <h2>Welcome to Sri Y.N. College</h2>
+        <p>Learn Today, Lead Tomorrow</p>
+    </div>
+</section>
+
+    <main>
+        <h2 id="departments">Our Departments</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Computer Science</h3>
+                <p>Learn programming and technology.</p>
+            </div>
+
+            <div class="card">
+                <h3>Commerce</h3>
+                <p>Explore business and accounting.</p>
+            </div>
+
+            <div class="card">
+                <h3>Management</h3>
+                <p>Develop leadership skills.</p>
+            </div>
+        </div>
+        <section id="examinations" class="results-section">
+    <h2>Student Examination Results</h2>
+
+    <p>Enter your Hall Ticket Number</p>
+
+    <form id="resultForm">
+        <input
+            type="text"
+            id="hallTicket"
+            placeholder="Enter Hall Ticket Number"
+            required
+        >
+
+        <button type="submit">Check Result</button>
+    </form>
+
+    <div id="result"></div>
+</section>
+
+<script>
+const students = {
+    "YN2026001": {
+        name: "Ravi Kumar",
+        marks: 425,
+        total: 500,
+        status: "PASS"
+    },
+    "YN2026002": {
+        name: "Sai Kumar",
+        marks: 180,
+        total: 500,
+        status: "FAIL"
+    }
+};
+
+document.getElementById("resultForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const hallTicket = document.getElementById("hallTicket")
+        .value.trim().toUpperCase();
+
+    const student = students[hallTicket];
+    const result = document.getElementById("result");
+
+    if (student) {
+        result.innerHTML = `
+            <h3>Examination Result</h3>
+            <p><b>Hall Ticket:</b> ${hallTicket}</p>
+            <p><b>Student Name:</b> ${student.name}</p>
+            <p><b>Marks:</b> ${student.marks}/${student.total}</p>
+            <h2>Result: ${student.status}</h2>
+        `;
+    } else {
+        result.textContent = "Hall Ticket Number not found. Please check again.";
+    }
+});
+</script>
+    </main>
+
+    <footer>
+        <p>College Website Project</p>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

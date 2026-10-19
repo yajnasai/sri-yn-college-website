@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("images/college.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background: transparent;
+    text-align: center;
+    padding: 25px 10px;
+    color: #9b111e;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 6px;
+}
+
+nav {
+    background: #bd1717;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #7e1010;
+}
+
+.hero {
+    min-height: 450px;
+    background-image: url("images/college.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 35px 15px;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: #9b111e;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+main h2 {
+    color: #9b111e;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    padding: 25px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+.card h3 {
+    color: #9b111e;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+footer {
+    background: #292929;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+}
+.college-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+.college-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+.results-section {
+    background: white;
+    color: #333;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.results-section input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.results-section button {
+    background: #9b111e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+}
